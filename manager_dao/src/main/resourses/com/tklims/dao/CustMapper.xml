@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 命名空间的名字必须和 接口的全名一致
+-->
+<mapper namespace="com.tklims.dao.CustMapper">
+
+<insert id="insertCust">
+    insert into  cust values (null ,#{name},#{password},#{phone},#{adress})
+</insert>
+
+    <select id="selectAll" resultType="com.tklims.pojo.Cust">
+        select * from cust
+    </select>
+</mapper>
+
+
